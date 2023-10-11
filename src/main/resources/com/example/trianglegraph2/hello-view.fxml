@@ -11,8 +11,7 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="329.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trianglegraph2.HelloController">
+<AnchorPane prefHeight="329.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trianglegraph2.HelloController">
    <children>
    
               <Label fx:id="welcomeText" />
@@ -21,9 +20,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="sideB" layoutX="43.0" layoutY="205.0" prefHeight="25.0" prefWidth="48.0" />
-      <TextField fx:id="sideC" layoutX="43.0" layoutY="243.0" prefHeight="25.0" prefWidth="48.0" />
-      <TextField fx:id="sideA" layoutX="43.0" layoutY="285.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="sideB" layoutX="43.0" layoutY="248.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="sideC" layoutX="43.0" layoutY="282.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="sideA" layoutX="43.0" layoutY="206.0" prefHeight="25.0" prefWidth="48.0" />
       <Polygon layoutX="202.0" layoutY="120.0" points="-128.0, 26.0, 87.0, 80.0, 27.0, -94.0" stroke="#ff2c00" strokeType="INSIDE">
          <fill>
             <RadialGradient centerX="0.5552486187845304" centerY="0.518957345971564" radius="0.5">

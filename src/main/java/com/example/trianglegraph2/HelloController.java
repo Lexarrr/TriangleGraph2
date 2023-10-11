@@ -18,11 +18,20 @@ public class HelloController {
     @FXML
     protected void onClickCalcArea() {
 
-        Triangle triangle = new Triangle(Integer.parseInt(sideA.getText()),
-                                         Integer.parseInt(sideB.getText()),
-                                         Integer.parseInt(sideC.getText()));
+        Triangle triangle = null;
+        try {
+            triangle = new Triangle(Integer.parseInt(sideA.getText()),
+                                             Integer.parseInt(sideB.getText()),
+                                             Integer.parseInt(sideC.getText()));
 
-        resArea.setText(String.valueOf(triangle.getArea()));
+            resArea.setText(String.valueOf(triangle.getArea()));
+        } catch (MineExcept e) {
+            resArea.setText("Сработало исключение при построении тр-ка "+e);
+        } catch (NegativeLenException e) {
+            resArea.setText("Снова исключение "+e);
+        }
+
+
     }
 
 

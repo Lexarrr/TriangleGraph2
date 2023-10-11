@@ -9,24 +9,19 @@ public class Triangle {
 
     int A, B, C;
 
-    public Triangle(int a, int b, int c) throws NumberFormatException{
-        try {
-            if (((a + b) < c) || ((a + c) < b) || ((b + c) < a))
-                throw new MineExcept();
-
-        } catch (MineExcept e) {
-            System.out.println("Exception: " + e);
-            return;
-        }
+    public Triangle(int a, int b, int c) throws MineExcept, NegativeLenException {
         if (a <= 0){
-            a = 1;
+            throw new NegativeLenException(a);
         }
         if (b <= 0){
-            b = 1;
+            throw new NegativeLenException(b);
         }
         if (c <= 0){
-            c = 1;
+            throw new NegativeLenException(c);
         }
+
+        if (((a + b) < c) || ((a + c) < b) || ((b + c) < a))
+            throw new MineExcept();
         A = a;
         B = b;
         C = c;
